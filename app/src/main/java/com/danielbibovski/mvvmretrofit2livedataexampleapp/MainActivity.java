@@ -1,17 +1,15 @@
 package com.danielbibovski.mvvmretrofit2livedataexampleapp;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProvider;
-import androidx.lifecycle.ViewModelProviders;
-import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
-
-import android.graphics.Movie;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.lifecycle.Observer;
+import androidx.lifecycle.ViewModelProvider;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import com.danielbibovski.mvvmretrofit2livedataexampleapp.adapter.MovieListAdapter;
 import com.danielbibovski.mvvmretrofit2livedataexampleapp.model.MovieModel;
@@ -40,7 +38,6 @@ public class MainActivity extends AppCompatActivity {
         adapter = new MovieListAdapter(this, movieModelsList);
         recyclerView.setAdapter(adapter);
 
-        //viewModel = ViewModelProviders.of(this).get(MovieListViewModel.class);
         viewModel = new ViewModelProvider(this).get(MovieListViewModel.class);
         viewModel.getMoviesListObserver().observe(this, new Observer<List<MovieModel>>() {
             @Override

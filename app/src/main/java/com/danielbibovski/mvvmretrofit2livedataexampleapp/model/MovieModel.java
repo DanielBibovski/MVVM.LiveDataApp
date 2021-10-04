@@ -4,9 +4,10 @@ import com.google.gson.annotations.SerializedName;
 
 public class MovieModel {
 
+    @SerializedName("author")
     private String title;
 
-    @SerializedName("url")
+    @SerializedName("download_url")
     private String image;
 
     public MovieModel() {

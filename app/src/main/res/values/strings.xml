@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">MVVM.LiveData.ExampleApp</string>
+    <string name="noResult_found_txtView">NO RESULT FOUND</string>
 </resources>
